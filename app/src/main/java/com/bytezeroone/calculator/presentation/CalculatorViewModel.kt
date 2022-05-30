@@ -1,4 +1,4 @@
-package com.bytezeroone.calculator
+package com.bytezeroone.calculator.presentation
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

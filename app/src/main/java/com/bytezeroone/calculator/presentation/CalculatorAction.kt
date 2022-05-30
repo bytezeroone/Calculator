@@ -1,4 +1,4 @@
-package com.bytezeroone.calculator
+package com.bytezeroone.calculator.presentation
 
 sealed class CalculatorAction {
     data class Number(val number: Int): CalculatorAction()

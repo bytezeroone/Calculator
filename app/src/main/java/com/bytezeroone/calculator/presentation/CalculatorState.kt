@@ -1,4 +1,4 @@
-package com.bytezeroone.calculator
+package com.bytezeroone.calculator.presentation
 
 data class CalculatorState(
     val number1: String = "",

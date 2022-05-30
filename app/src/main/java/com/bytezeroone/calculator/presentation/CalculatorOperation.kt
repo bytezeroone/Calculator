@@ -1,4 +1,4 @@
-package com.bytezeroone.calculator
+package com.bytezeroone.calculator.presentation
 
 sealed class CalculatorOperation(val symbol: String) {
     object Add: CalculatorOperation("+")
