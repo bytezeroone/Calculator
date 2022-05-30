@@ -58,11 +58,9 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Clear)
                     },
-                    icon = null
                 )
-                CalculatorButton(
+                CalculatorButtonWithIcon(
                     icon = Icons.Outlined.Backspace,
-                    symbol = "",
                     modifier = Modifier
                         .background(LightGray)
                         .aspectRatio(1f)
@@ -80,7 +78,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Operation(CalculatorOperation.Divide))
                     },
-                    icon = null
                 )
             }
             Row(
@@ -96,7 +93,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(7))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "8",
@@ -107,7 +103,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(8))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "9",
@@ -118,7 +113,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(9))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "x",
@@ -129,7 +123,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Operation(CalculatorOperation.Multiply))
                     },
-                    icon = null
                 )
             }
             Row(
@@ -145,7 +138,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(4))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "5",
@@ -156,7 +148,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(5))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "6",
@@ -167,7 +158,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(6))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "-",
@@ -178,7 +168,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Operation(CalculatorOperation.Subtract))
                     },
-                    icon = null
                 )
             }
             Row(
@@ -194,7 +183,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(1))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "2",
@@ -205,7 +193,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(2))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "3",
@@ -216,7 +203,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(3))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "+",
@@ -227,7 +213,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Operation(CalculatorOperation.Add))
                     },
-                    icon = null
                 )
             }
             Row(
@@ -243,7 +228,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(0))
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = ".",
@@ -254,7 +238,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Decimal)
                     },
-                    icon = null
                 )
                 CalculatorButton(
                     symbol = "=",
@@ -265,7 +248,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Calculate)
                     },
-                    icon = null
                 )
             }
         }

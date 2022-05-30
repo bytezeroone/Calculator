@@ -18,7 +18,6 @@ fun CalculatorButton(
     symbol: String,
     modifier: Modifier,
     onClick: () -> Unit,
-    icon: ImageVector?
 ) {
     Box(
         contentAlignment = Alignment.Center,
@@ -27,13 +26,27 @@ fun CalculatorButton(
             .clickable { onClick() }
             .then(modifier)
     ) {
-        if (icon != null) {
-            Icon(imageVector = icon, contentDescription = "icon")
-        }
         Text(
             text = symbol,
             fontSize = 36.sp,
             color = Color.White
         )
+    }
+}
+
+@Composable
+fun CalculatorButtonWithIcon(
+    modifier: Modifier,
+    onClick: () -> Unit,
+    icon: ImageVector
+) {
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = Modifier
+            .clip(CircleShape)
+            .clickable { onClick() }
+            .then(modifier)
+    ) {
+        Icon(imageVector = icon, contentDescription = "icon")
     }
 }
