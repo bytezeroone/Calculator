@@ -2,15 +2,14 @@ package com.bytezeroone.calculator
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Icon
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Backspace
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.Remove
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -34,17 +33,25 @@ fun Calculator(
                 .align(Alignment.BottomCenter),
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)
         ) {
-            Text(
-                text = state.number1 + (state.operation?.symbol ?: "") + state.number2,
-                textAlign = TextAlign.End,
-                color = Color.White,
+            Box(
                 modifier = Modifier
-                    .padding(vertical = 24.dp)
-                    .align(Alignment.End),
-                fontWeight = FontWeight.Light,
-                fontSize = 64.sp,
-                maxLines = 2
-            )
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(Color.Gray)
+            ) {
+                Text(
+                    text = state.number1 + (state.operation?.symbol ?: "") + state.number2,
+                    textAlign = TextAlign.End,
+                    color = Color.White,
+                    modifier = Modifier
+                        .padding(vertical = 24.dp, horizontal = 8.dp)
+                        .align(Alignment.BottomEnd),
+                    fontWeight = FontWeight.Light,
+                    fontSize = 64.sp,
+                    maxLines = 2
+                )
+            }
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
