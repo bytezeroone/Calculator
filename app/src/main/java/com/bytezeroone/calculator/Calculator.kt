@@ -61,6 +61,7 @@ fun Calculator(
                 )
                 CalculatorButtonWithIcon(
                     icon = Icons.Outlined.Backspace,
+                    description = "Remove one letter",
                     modifier = Modifier
                         .background(LightGray)
                         .aspectRatio(1f)

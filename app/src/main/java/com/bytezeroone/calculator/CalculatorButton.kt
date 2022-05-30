@@ -38,7 +38,8 @@ fun CalculatorButton(
 fun CalculatorButtonWithIcon(
     modifier: Modifier,
     onClick: () -> Unit,
-    icon: ImageVector
+    icon: ImageVector,
+    description: String
 ) {
     Box(
         contentAlignment = Alignment.Center,
@@ -47,6 +48,10 @@ fun CalculatorButtonWithIcon(
             .clickable { onClick() }
             .then(modifier)
     ) {
-        Icon(imageVector = icon, contentDescription = "icon")
+        Icon(
+            imageVector = icon,
+            contentDescription = description,
+            tint = Color.White
+        )
     }
 }
